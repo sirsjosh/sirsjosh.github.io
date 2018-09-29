@@ -6,3 +6,9 @@ $('.port-item').click(function () {
       $(this).ekkoLightbox();
     });
     });
+
+    $(document).on('click', function(event) {
+        if ($(event.target).has('.no-gutters').length) {
+            $(".lightbox").hide();
+        }
+    });

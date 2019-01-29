@@ -1,25 +1,209 @@
-#main-header img{
+body {
     width: 100%;
     height: 100%;
+} 
+
+.backImg {
+  margin: auto;
+  padding: 250px;
+  background: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 60px center;
+  
 }
 
-.bg-black{
-    color: white;
-    background: black;
+
+
+.bgChange {
+  margin-top: -178px;
+  margin-left: -148px;
+  background: url(../img/pic1.jpg);
+  background-repeat: no-repeat;
+  position: fixed;
+  min-width: 50%; 
+  min-height: 60%;
+  background-size: cover;
+  
+  
 }
 
-#main-header .port-item{
-    width: 30%;
+
+video::-webkit-media-controls {
+  display:none !important;
+}
+
+video::-webkit-media-controls-timeline {}
+
+/*
+#myVideo{
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+    }
+*/
+
+
+
+video {
+    position: fixed;
+    display:block;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -5;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.content {
+    z-index: 1;
+  position: fixed;
+  bottom: 0;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+    position:absolute;
     
 }
 
-#main-header .port-item:hover{
-    opacity: 0.8;
-    cursor: pointer;
+#arrows {
+  position: fixed;
+  top: 0;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 5px;
+ 
+
 }
 
-@media(min-width:1199px){
-    #main-header .port-item{
-        padding: 3em !important;
+#sound {
+  position: fixed;
+  margin-top: 35px;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 5px;
+ 
+
+}
+
+.myContent {
+   
+  position: fixed;
+  bottom: 0;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 5px;
+/*    border-top: 4px solid white;*/
+/*   overflow:scroll;*/
+    
+}
+
+#btns{
+   position: fixed;
+   display: flex;
+   justify-content: space-between;
+}
+
+.contentOnPic{
+  position: fixed;
+    top: 0;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+.blinking{
+    animation:blinkingText 6.0s infinite;
+}
+
+#dot1,#dot8,#dot15,#dot22,#dot29{
+    margin-left: 30px;
+}
+
+#dot2,#dot9,#dot16,#dot23,#dot30{
+    margin-right: 200px;
+}
+
+#dot3,#dot10,#dot17,#dot24,#dot31{
+    margin-left: 250px;
+}
+
+#dot4,#dot11,#dot18,#dot25,#dot32{
+    margin-right: 100px;
+}
+
+#dot5,#dot12,#dot19,#dot26,#dot33{
+    margin-right: 150px;
+}
+
+#dot6,#dot13,#dot20,#dot27,#dot34{
+    margin-left: 80px;
+}
+
+#dot,#dot14,#dot21,#dot28,#dot35{
+    margin-right: 120px;
+}
+
+@keyframes blinkingText{
+    0%{     color: red;    }
+    49%{    color: transparent; }
+    50%{    color: red; }
+    99%{    color:transparent;  }
+    100%{   color: red;    }
+}
+
+
+
+@media all and (max-width: 640px) {
+      #myVideo{
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+    }
+    #mypic{
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
     }
 }
+
+
+.dropzone {
+     position: fixed;
+/*  top: 0;*/
+  margin-top: 49px;
+  color: #f1f1f1;
+  width: 100%;
+  height: 400px;
+  padding: 0px;
+  border-bottom: 4px solid white;
+  border: dashed 4px transparent;
+}
+
+
+
+.draggableRotate {
+  
+  transform: rotate(0);
+  transform-origin: center center;
+  user-select: none;
+}
+
+.myBtn{
+    height:20px;
+  width:60px;
+}
+
